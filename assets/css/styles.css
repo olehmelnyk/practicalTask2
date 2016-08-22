@@ -1,0 +1,390 @@
+/*
+    Basic styles & reset
+*/
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+}
+
+a{
+    color: #777;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #333;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    margin: 0;
+}
+
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+input[type=submit]{
+    border: 0;
+}
+
+/*
+    Content
+*/
+
+.Header-logo{
+    width: 95px;
+    height: 30px;
+    margin: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+.SearchBox,
+.NavBox{
+    min-height: 59px;
+    color: #222;
+}
+
+.SearchBox{
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.SearchBox--search-form{
+    position: relative;
+    height: 40px;
+    width: 630px;
+    top: 10px;
+    bottom: 10px;
+    left: 127px;
+    font-size: 0;
+    border-top: 1px solid #a0a0a0;
+    border-bottom: 1px solid #b9b9b9;
+    border-left: 1px solid #b9b9b9;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.SearchBox--search-field{
+    height: 26px;
+    width: 520px;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.SearchBox--input-field{
+    height: 26px;
+    width: 500px;
+    padding: 6px;
+    font-size: 16px;
+    line-height: 26px;
+    border: none;
+    float: left;
+}
+
+.SearchBox--input-keyboard,
+.SearchBox--input-mic{
+    float: left;
+    width: 38px;
+    height: 40px;
+}
+
+.SearchBox--input-keyboard:hover,
+.SearchBox--input-mic:hover{
+    background-color: lightgrey;
+}
+
+.SearchBox--submit{
+    background-color: #3b78e7;
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+.SearchBox--icons{
+    float: right;
+    position: absolute;
+    top: 12px;
+    right: 30px;
+
+}
+
+.SearchBox--icons__notification,
+.SearchBox--icons__avatar,
+.SearchBox--icons__apps{
+    height: 35px;
+    width: 35px;
+    margin-left: 25px;
+}
+
+.SearchBox--icons__apps{
+}
+
+.SearchBox--icons__notification{
+}
+
+.SearchBox--icons__avatar{
+}
+
+.NavBox{
+    background-color: #ffffff;
+    border-bottom: 1px solid #ebebeb;
+    line-height: 54px;
+    white-space: nowrap;
+    word-spacing: 0;
+    position: relative;
+}
+
+.NavBox--list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.NavBox--list-item{
+    display: inline-block;
+    padding: 0 8px;
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+.NavBox--list-item__instruments{
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.NavBox--list-item__instruments:hover{
+    background-color: #f8f8f8;
+    border: 1px solid #d7d7d7;
+    line-height: 1;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.NavBox--list-item__active{
+    height: 54px;
+    border-bottom: 2px solid #4285f4;
+    font-weight: bold;
+}
+
+.NavBox--list-item__active a,
+.NavBox--list-item__active a:hover
+{
+    color: #4285f4;
+}
+
+.NavBox--list-item:first-child{
+    margin: 2px 8px 0 128px;
+}
+
+.NavBox--buttons{
+    position: relative;
+    top: 15px;
+    bottom: 15px;
+    right: 28px;
+    float: right;
+    height: 54px;
+    line-height: 54px;
+    font-size: 0;
+}
+
+.NavBox--button{
+    height: 30px;
+    padding: 0 8px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    white-space: nowrap;
+    word-spacing: 0;
+    border: 1px solid #cccccc;
+    background-color: #f8f8f8;
+    color: #333;
+    display: inline-block;
+    cursor: default;
+}
+
+.NavBox--button__user,
+.NavBox--button__global{
+    margin: 0;
+    min-width: 44px;
+}
+
+.NavBox--button__settings{
+    min-width: 75px;
+    margin-left: 16px;
+}
+
+main{
+    flex: 1;
+}
+
+main a,
+main a:hover{
+    color: #1a0dab;
+}
+
+main a:hover{
+    text-decoration: underline;
+}
+
+.Wrapper{
+    margin-left: 136px;
+}
+
+.ResultsStat{
+    line-height: 42px;
+    white-space: nowrap;
+    word-spacing: 0;
+    color: #808080;
+    height: 43px;
+    padding: 0 8px 0 0;
+}
+
+.SearchResults{
+    width: 600px;
+    max-width: 600px;
+}
+
+.SearchResults--list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.SearchResults--title{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.SearchResults--url{
+    color: #006621;
+}
+
+.SearchResults--description{
+    line-height: 18px;
+    color: #545454;
+}
+
+.SearchResults--related-results-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.SearchResults--related-results-item{
+    display: inline-block;
+    margin-bottom: 28px;
+}
+
+.SearchResults--related-results-item:not(:last-of-type):after{
+    content: " · ";
+    color: #777;
+}
+
+.RelatedResults{
+    height: 124px;
+    max-width: 600px;
+    margin: 0 0 16px 0;
+}
+
+.RelatedResults--title{
+    font-family: arial, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #808080;
+}
+
+.RelatedResults--list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    column-count: 2;
+    max-width: 280px;
+}
+
+.RelatedResults--item{
+    line-height: 20px;
+}
+
+.Pagination{
+    margin: 30px 0;
+    width: 616px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Pagination a,
+.Pagination a:hover{
+    color: #4285f4;
+}
+
+.Pagination-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    align-self: flex-end;
+}
+
+.Pagination--item{
+    display: inline-block;
+    color: #4285f4;
+    width: 20px;
+}
+
+.Pagination--item__active{
+    color: #000;
+}
+
+.Pagination--next{
+    position: absolute;
+    margin-left: 200px;
+}
+
+footer{
+    min-height: 65px;
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    padding-top: 18px;
+    min-width: 980px;
+}
+
+.SearchLocation{
+    height: 25px;
+    line-height: 15px;
+    color: #aaa;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Terms{
+    list-style-type: none;
+    padding: 0;
+}
+
+.Terms--item{
+    display: inline-block;
+    margin-right: 27px;
+    cursor: pointer;
+}
